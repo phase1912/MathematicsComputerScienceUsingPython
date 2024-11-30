@@ -29,14 +29,14 @@ plt.legend()
 plt.grid(True)
 plt.show()
 
-# Завдання 2: Невизначений та визначений інтеграли за допомогою SymPy
+# Завдання 1: Невизначений та визначений інтеграли за допомогою SymPy
 indef_integral = integrate(f, x)  # Невизначений інтеграл
 def_integral = integrate(f, (x, a, b))  # Визначений інтеграл
 print("Невизначений інтеграл:")
 print(indef_integral)
 print(f"Визначений інтеграл від {a} до {b}: {def_integral.evalf()}")
 
-# Завдання 3: Метод прямокутників
+# Завдання 2: Метод прямокутників
 def rectangle_method(func, a, b, n=1000):
     h = (b - a) / n
     x_vals = np.linspace(a, b - h, n)
@@ -45,7 +45,7 @@ def rectangle_method(func, a, b, n=1000):
 rect_integral = rectangle_method(f_func, a, b)
 print(f"Інтеграл методом прямокутників: {rect_integral}")
 
-# Завдання 4: Метод трапецій
+# Завдання 3: Метод трапецій
 def trapezoidal_method(func, a, b, n=1000):
     h = (b - a) / n
     x_vals = np.linspace(a, b, n + 1)
